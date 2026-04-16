@@ -1,15 +1,30 @@
-n = int(input())
-is_prime = True
+# n = int(input())
+# is_prime = True
 
-if n < 2:
-    is_prime = False
-else:
+# if n < 2:
+#     is_prime = False
+# else:
+#     for i in range(2, int(n**0.5) + 1):
+#         if n % i == 0:
+#             is_prime = False
+#             break
+
+# if is_prime:
+#     print("Yes")
+# else:
+#     print("No")
+
+# 2 - usul
+def is_prime(n):
+    if n < 2:
+        return False
     for i in range(2, int(n**0.5) + 1):
         if n % i == 0:
-            is_prime = False
-            break
+            return False
+    return True
 
-if is_prime:
+n = int(input())
+if is_prime(n):
     print("Yes")
 else:
     print("No")
