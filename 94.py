@@ -1,10 +1,13 @@
-n = int(input())
-birlar_soni = 0
-while n > 0: 
-    ohirgi_raqam = n % 10  
-    if ohirgi_raqam == 1:
-        birlar_soni += 1
-
-    n = n // 10  
-
-print(birlar_soni)
+def digit_sum(x):
+    s = 0
+    for digit in str(x):
+        s += int(digit)
+    return s
+def kopaytma(x):
+    s = 1
+    for digit in str(x):
+        s *= int(digit)
+    return s
+for i in range(100, 1000):
+    if kopaytma(i) % digit_sum(i) == 0:
+        print(i)
